@@ -78,50 +78,6 @@ public FlowPane napraviDole()
 	
 	return dole;
 }
-
-public FlowPane napraviDole()
-{
-	FlowPane dole = new FlowPane();
-	for(int i = 0; i < 26; ++i)
-	{
-		Button dugme = new Button();
-		
-		String text = String.valueOf( (char)('A' + i) );
-
-		dugme.setOnMouseClicked(this);
-		dugme.setText(text);
-		dugme.setPrefSize(50,  50);
-		dole.getChildren().add(dugme);
-	}
-	
-	dole.setPadding(new Insets(10, 10, 10, 30));
-	dole.setVgap(5);
-	dole.setHgap(8);
-	
-	return dole;
-}
-
-public FlowPane napraviDole()
-{
-	FlowPane dole = new FlowPane();
-	for(int i = 0; i < 26; ++i)
-	{
-		Button dugme = new Button();
-		
-		String text = String.valueOf( (char)('A' + i) );
-
-		dugme.setOnMouseClicked(this);
-		dugme.setText(text);
-		dugme.setPrefSize(50,  50);
-		dole.getChildren().add(dugme);
-	}
-	
-	dole.setPadding(new Insets(10, 10, 10, 30));
-	dole.setVgap(5);
-	dole.setHgap(8);
-	
-	return dole;
-}
 CODE;
 
 /*echo "<table style='font-size: 12px;'>";
