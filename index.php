@@ -1,12 +1,3 @@
-<html>
-<head>
-	<link href="prism.css" rel="stylesheet" />
-	<script src="prism.js"></script>
-</head>
-
-<body>
-
-
 <?php
 
 function generateCode($code, $text, $highlight)
@@ -28,35 +19,6 @@ function generateCode($code, $text, $highlight)
 
 
 $code = <<<'CODE'
-public class PubnubPublishTest {
-
-    String channel = "pubnub_java_api";
-    String channel_enc = "pubnub_java_api_enc";
-
-    Pubnub _pubnub;
-    Pubnub _pubnub_enc;
-
-    Object[] messages;
-
-    public PubnubPublishTest() {
-        _pubnub = new Pubnub("demo", "demo", false);
-        _pubnub_enc = new Pubnub("demo", "demo", "demo", "demo", false);
-        messages = new Object[3];
-        messages[0] = "This is a string message";
-        JSONArray jsarr = new JSONArray();
-        jsarr.put("This is json array");
-        jsarr.put("One more entry in json array");
-        messages[1] = jsarr;
-        JSONObject jsobj = new JSONObject();
-        try {
-            jsobj.put("msg1", "Hi");
-            jsobj.put("msg2", "Java");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        messages[2] = jsobj;
-    }
-
 public FlowPane napraviDole()
 {
 	FlowPane dole = new FlowPane();
@@ -80,28 +42,37 @@ public FlowPane napraviDole()
 }
 CODE;
 
-/*echo "<table style='font-size: 12px;'>";
-echo "<tr>";
-
-echo "<td>";
-	echo "<pre class='line-numbers' data-line='1, 3, 13-20'><code class='language-java'>$code</code></pre>";
-echo "</td>";
-
-echo "<td>";
-	echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-	dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-	ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-echo "</td>";
-
-echo "</tr>";
-echo "</table>";*/
-
-
-generateCode($code, "Text", "1, 3, 5 ,7, 8,10-12, 14-20, 30, 40, 50, 60, 93");
-
-//generateCode($code, "Drugi text", "3, 5, 7");
 ?>
 
-</body>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaTuts</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="prism.css">
+    <link rel="stylesheet" href="main.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <?php generateCode($code, "Text", "1, 3, 5 ,7, 8,10-12, 14-20"); ?>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="prism.js"></script>
+  </body>
 </html>
